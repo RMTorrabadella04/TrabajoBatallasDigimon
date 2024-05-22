@@ -31,4 +31,6 @@ Solicitar el nombre del domador.
 Ofrecer opciones:
 1. Iniciar batalla
 2. Salir
-En resumen, el programa permite a un domador registrar y usar Digimon en batallas, con la opción de capturar nuevos Digimon si cumplen con ciertos criterio, aparte de lo puesto tiene más clases que alijeran la carga de ejecución.
+
+
+## En resumen, el programa permite a un domador registrar y usar Digimon en batallas, con la opción de capturar nuevos Digimon si cumplen con ciertos criterio, aparte de lo puesto tiene más clases que alijeran la carga de ejecución.
