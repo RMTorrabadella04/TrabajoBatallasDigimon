@@ -6,10 +6,6 @@ import java.util.Random;
 
 public class gestion {
 
-    // ------------ ATRIBUTOS ------------
-
-
-
     /**
      *
      * @param trainer → El domador es obligatorio de pasarlo, en caso de que sa su primer digimon le pondrá inicialmente un "Agumon", si no el digimon que le hayamos pasado
@@ -96,6 +92,16 @@ public class gestion {
         }
     }
 
+    /**
+     * Este método hace que el enemigo ataque al digimon del domador, la probabilidad de que el ataque sea de común o de especie es 60/40 respectivamente.
+     *
+     * @param trainer → Le paso el domador para en caso de digimon muera, poder quitarlo de la lista del equipo.
+     *
+     * @param mio → El digimon que recibirá el ataque y que en caso de morir, se quita del equipo.
+     *
+     * @param enemigo → El digimon que realiza el ataque
+     *
+     */
     public void ataqueEnemigo(domador trainer, digimon mio, digimon enemigo){
 
         Random r = new Random();
@@ -152,6 +158,8 @@ public class gestion {
     public boolean salir(domador trainer, boolean terminarBatalla){
         if(trainer.getCapturadoAgumon() && trainer.getCapturadoGabumon() && trainer.getCapturadoPatamon()){
             terminarBatalla=true;
+
+            System.out.println("¡Felicidades "+trainer.getNombre()+" has completado el juego!");
         }
 
         for (int i = 0; i < trainer.getEquipoDigimon().size(); i++) {

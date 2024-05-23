@@ -16,8 +16,7 @@ public class batallaDigital {
 
     public batallaDigital(){
 
-        String[] nombres = {"Agumon", "Gabumon", "Patamon"};
-        enemigo = new digimon(nombres[r.nextInt(nombres.length)]);
+       enemigo=nuevoEnemigo();
 
     }
 
@@ -66,6 +65,19 @@ public class batallaDigital {
             return null;
         }
     }
+
+
+    /**
+     *Este metodo es el menu el cual llama a los otros metodos y que permite seleccionar entre los metodos de ataque y captura.
+     *
+     * @param trainer → Le paso el domador debido a que algunos de los metodos que llamo desde el interior lo requieren, así como AtaqueEnemigo();
+     *
+     * @param mio → Le paso mi digimon para realizar mis ataques, además de para recibir los ataques del enemigo.
+     *
+     * @param enemigo → Le paso el enemigo para poder realizar los ataques a mi digimon, y recibir los mios.
+     *
+     * @return → Lo que retorna es un digimon el cual es almacenado en el digimon enemigo, esto es asi para en caso de que el enemigo se quede sin vida, poder generar otro con un metodo.
+     */
 
     public digimon pelea(domador trainer, digimon mio, digimon enemigo){
 
@@ -119,6 +131,12 @@ public class batallaDigital {
         return enemigo;
     }
 
+    /**
+     * Este metodo genera aleatoriamente un digimon, el cual pasara a ser el enemigo
+     *
+     * @return → Retorna un digimon generado aleatoriamente.
+     *
+     */
     public digimon nuevoEnemigo(){
         String[] nombres = {"Agumon", "Gabumon", "Patamon"};
         digimon enemigo = new digimon(nombres[r.nextInt(nombres.length)]);
